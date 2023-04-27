@@ -139,7 +139,7 @@ console.log(p1)
     }
   }
   
-  if(b<6){
+  if(b<8){
     health -= 1;
     document.getElementById("health").innerHTML = health.toString();
     result = "<p>"
@@ -160,7 +160,7 @@ console.log(p1)
     result += "</p>"
     io.write_into_element(result, "sell_results")
 
-  }else if(b >= 6){
+  }else if(b >= 8){
     health += 1;
     document.getElementById("health").innerHTML = health.toString();
     result = "<p>"
