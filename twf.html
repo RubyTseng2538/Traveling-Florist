@@ -1,0 +1,67 @@
+<!DOCTYPEhtml><head>
+<title> Mouth</title>
+
+
+<script src="jquery-1.11.2.min.js"></script>
+<script src="tracery.min.js"></script>
+<script src="input_output.js"></script>
+<script src="grammar.js"></script>
+<script src="twf.js"></script>
+
+
+
+</head>
+<body>
+  <a href="name_generator.html">Name Generator</a>
+  <a href="twf.html">Traveling with Flowers</a>
+
+<pre>This helper is for one player. Please make multiple copies of this helping (via each person have the webpage) to play the game.</pre>
+<br>
+
+<div id="player1">
+  <label>Name:<input type="text" id="p1_name"></label>
+  <br>
+  <p>Choose a hairstyle:</p>
+  <input type="radio" name="hairstyle" value="lw">Long and Wavy
+  <input type="radio" name="hairstyle" value="sc">Short and Clean
+  <input type="radio" name="hairstyle" value="tb">Tied up in a Bun
+  <input type="radio" name="hairstyle" value="ls">Long and Smooth
+  <input type="radio" name="hairstyle" value="scu">Short and Curly
+  <br>
+  <p>Choose a personality:</p>
+  <input type="radio" name="personality" value="f">Flirtatious
+  <input type="radio" name="personality" value="r">Romantic
+  <input type="radio" name="personality" value="w">Warm and Kind
+  <input type="radio" name="personality" value="fu">Funny
+  <input type="radio" name="personality" value="s">Sympathetic
+  <br>
+  <p>Choose an appearance:</p>
+  <input type="radio" name="appearance" value="sim">Simple and Clean
+  <input type="radio" name="appearance" value="loo">Loosely Dressed
+  <input type="radio" name="appearance" value="sum">Summer Vibe
+  <input type="radio" name="appearance" value="cas">Casual Elegant
+  <input type="radio" name="appearance" value="fas">Fashionable
+  <p>Check three flowers you get from the random flower generator</p>
+  <input type="checkbox" name="flower" id="flower1" value="Amaryllis"> Amaryllis
+  <input type="checkbox" name="flower" id="flower2" value="Rose"> Rose
+  <input type="checkbox" name="flower" id="flower3" value="Tulip"> Tulip
+  <input type="checkbox" name="flower" id="flower4" value="Sunflower"> Sunflower
+  <input type="checkbox" name="flower" id="flower5" value="Lily"> Lily
+  <input type="checkbox" name="flower" id="flower6" value="Peony"> Peony
+</div>
+<br>
+<button onclick="generate_flowers()">Generate Flowers</button>
+<div id="flowers"></div>
+
+<p> After you checked the flowers you are selling. You will be roaming the streets selling the flowers you have in stock. 
+  You start with 5 patience (represented as hearts), if you lose all your patience you lose the game. If you reach 10 patience you win the game.
+  Click the button to sell your flowers.</p>
+  <p id="health">5</p>
+<button onclick="sell_flowers()">Sell Flower Bouquet</button>
+<div id="sell_results"></div>
+<p>After you sell flowers 3 times. You can choose to go home and rest.</p>
+<button onclick="go_home()">Time to rest</button>
+<div id="home_message"></div>
+<div id="win_message"></div>
+</body>
+</html>
